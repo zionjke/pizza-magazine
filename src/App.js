@@ -2,16 +2,15 @@ import React, {useEffect} from 'react';
 import {Header} from "./components";
 import {Cart, Home} from "./pages";
 import {Route} from "react-router-dom";
-import {connect} from "react-redux";
+import {useDispatch} from "react-redux";
 import {getPizzas} from "./redux/reducers/pizzas";
 
 
-
-
-function App({getPizzas,pizzas}) {
+function App() {
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        getPizzas()
+        dispatch(getPizzas())
     },[]);
 
     return (
@@ -19,7 +18,7 @@ function App({getPizzas,pizzas}) {
             <div className="wrapper">
                 <Header/>
                 <div className="content">
-                    <Route exact path='/' render={ () => <Home items={pizzas}/>}/>
+                    <Route exact path='/' component={Home}/>
                     <Route exact path='/cart' component={Cart}/>
                 </div>
             </div>
@@ -27,10 +26,7 @@ function App({getPizzas,pizzas}) {
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        pizzas: state.pizzas.items
-    }
-}
 
-export default connect(mapStateToProps,{getPizzas})(App);
+export default App;
+
+
