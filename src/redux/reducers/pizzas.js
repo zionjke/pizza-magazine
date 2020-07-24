@@ -20,7 +20,7 @@ function pizzasReducer(state = initialState, action) {
 
 export const getPizzas =  () => async (dispatch) => {
         let response = await api.getPizzas();
-        dispatch(action.setPizzas(response.data.pizzas))
+        dispatch(action.setPizzas(response.data))
 }
 
 export {pizzasReducer};

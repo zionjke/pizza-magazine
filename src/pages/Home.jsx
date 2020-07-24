@@ -10,7 +10,6 @@ const sortItems = [
     {name: 'алфавит', type: 'alphabet'},
 ];
 
-
 const Home = () => {
     const dispatch = useDispatch();
     // const items = useSelector((state) => state.pizzas.items);
