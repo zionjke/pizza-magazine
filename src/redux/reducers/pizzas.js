@@ -13,14 +13,21 @@ function pizzasReducer(state = initialState, action) {
                 ...state,
                 items: action.payload,
                 isLoaded: true
+            };
+
+        case 'SET_LOADED':
+            return {
+                ...state,
+                isLoaded: action.payload
             }
     }
     return state;
 }
 
-export const getPizzas =  () => async (dispatch) => {
+export const getPizzas =  (sortBy,category) => async (dispatch) => {
+        dispatch(action.setLoaded(false));
         let response = await api.getPizzas();
-        dispatch(action.setPizzas(response.data))
+        dispatch(action.setPizzas(response.data));
 };
 
 export {pizzasReducer};

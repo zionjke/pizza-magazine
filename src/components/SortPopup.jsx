@@ -1,18 +1,17 @@
 import React, {useEffect, useRef, useState} from "react";
 
-const SortPopup = React.memo(({items}) => {
+const SortPopup = React.memo(({items,activeSortType,onClickSort}) => {
     const [visiblePopup,setVisiblePopup] = useState(false);
-    const [activeItem,setActiveItem] = useState(0);
     const sortRef = useRef(); // ссылка на DOM элемент
-    const activeLabel = items[activeItem].name;
+    const activeLabel = items.find(item => item.type === activeSortType).name;
 
     const toggleVisiblePopup = () => {
         setVisiblePopup(!visiblePopup)
     };
 
-    const onSelectItem = index => {
-        setActiveItem(index);
-        setVisiblePopup(false)
+    const onSelectItem = type => {
+        setVisiblePopup(false);
+        onClickSort(type)
     };
 
     const handleOutsideClick = (e) => {
@@ -49,8 +48,8 @@ const SortPopup = React.memo(({items}) => {
                 <ul>
                     {
                         items.map((item,index) => <li key={`${item.type}_${index}`}
-                                                      className={`${activeItem === index && 'active'}`}
-                                                      onClick={()=>onSelectItem(index)}>
+                                                      className={`${activeSortType === item.type && 'active'}`}
+                                                      onClick={()=>onSelectItem(item.type)}>
                             {item.name}
                         </li>)
                     }

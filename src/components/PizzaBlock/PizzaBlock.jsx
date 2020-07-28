@@ -2,7 +2,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames'
 
-const PizzaBlock = ({name, imageUrl, price, types, sizes}) => {
+
+const PizzaBlock = ({name, imageUrl, price, types, sizes,isLoaded}) => {
     const availableTypes = ['тонкое', 'традиционное'];
     const availableSizes = [26, 30, 40];
     const [activeType, setActiveType] = React.useState(types[0]);
@@ -15,6 +16,8 @@ const PizzaBlock = ({name, imageUrl, price, types, sizes}) => {
     const onSelectSize = (index) => {
         setActiveSize(index)
     };
+
+
     return (
         <div className="pizza-block">
             <img
@@ -77,24 +80,26 @@ const PizzaBlock = ({name, imageUrl, price, types, sizes}) => {
         </div>
     );
 };
-
-PizzaBlock.propTypes = {
-    id:PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    types: PropTypes.arrayOf([PropTypes.number]).isRequired,
-    sizes:PropTypes.arrayOf([PropTypes.number]).isRequired,
-    category:PropTypes.number.isRequired,
-    rating:PropTypes.number.isRequired
-};
-
-PizzaBlock.defaulProps = {
-    name: '---',
-    price:0,
-    types:[],
-    sizes:[]
-}
+//
+// PizzaBlock.propTypes = {
+//     id:PropTypes.number.isRequired,
+//     name: PropTypes.string.isRequired,
+//     imageUrl: PropTypes.string.isRequired,
+//     price: PropTypes.number.isRequired,
+//     types: PropTypes.arrayOf([PropTypes.number]).isRequired,
+//     sizes:PropTypes.arrayOf([PropTypes.number]).isRequired,
+//     category:PropTypes.number.isRequired,
+//     rating:PropTypes.number.isRequired,
+//
+// };
+//
+// PizzaBlock.defaulProps = {
+//     name: '---',
+//     price:0,
+//     types:[],
+//     sizes:[]
+// };
 
 
 export default PizzaBlock
+
