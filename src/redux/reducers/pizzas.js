@@ -26,7 +26,7 @@ function pizzasReducer(state = initialState, action) {
 
 export const getPizzas =  (sortBy,category) => async (dispatch) => {
         dispatch(action.setLoaded(false));
-        let response = await api.getPizzas();
+        let response = await api.getPizzas(sortBy,category);
         dispatch(action.setPizzas(response.data));
 };
 

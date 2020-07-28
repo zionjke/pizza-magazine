@@ -7,9 +7,9 @@ import LoadingBlock from "../components/PizzaBlock/LoadingBlock";
 
 const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 const sortItems = [
-    {name: 'популярности', type: 'popular'},
-    {name: 'цене', type: 'price'},
-    {name: 'алфавит', type: 'alphabet'},
+    {name: 'популярности', type: 'popular',order:'desc'},
+    {name: 'цене', type: 'price',order:'desc'},
+    {name: 'алфавит', type: 'name',order:'asc'},
 ];
 
 const Home = () => {
@@ -38,7 +38,9 @@ const Home = () => {
                 <Categories onClickCategory={(catIndex) => onSelectCategory(catIndex)}
                             activeCategory={category}
                             items={categoryNames}/>
-                <SortPopup onClickSort={(sortType) => {onSelectSortType(sortType)}} activeSortType={sortBy} items={sortItems}/>
+                <SortPopup onClickSort={(sortType) => {onSelectSortType(sortType)}}
+                           activeSortType={sortBy.type}
+                           items={sortItems}/>
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
