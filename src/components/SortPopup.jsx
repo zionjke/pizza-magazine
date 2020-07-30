@@ -15,7 +15,8 @@ const SortPopup = React.memo(({items,activeSortType,onClickSort}) => {
     };
 
     const handleOutsideClick = (e) => {
-        if(!e.path.includes(sortRef.current)) { // includes - проверка массива на наличие элемента в нем
+        const path = e.path || (e.composedPath && e.composedPath());
+        if(!path.includes(sortRef.current)) { // includes - проверка массива на наличие элемента в нем
             setVisiblePopup(false)    // если кликнули вне области блока то срабатывает функция
         }
     };

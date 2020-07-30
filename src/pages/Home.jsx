@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setCategory, setSortBy} from "../redux/actions/filters";
 import {getPizzas} from "../redux/reducers/pizzas";
 import LoadingBlock from "../components/PizzaBlock/LoadingBlock";
+import {addPizzaToCart} from "../redux/actions/cart";
 
 const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 const sortItems = [
@@ -16,6 +17,7 @@ const Home = () => {
     const dispatch = useDispatch();
     const {isLoaded, items} = useSelector(({pizzas}) => pizzas);
     const {sortBy,category} = useSelector(({filters}) => filters);
+    const cartItems = useSelector(({cart}) => cart.items);
 
     const onSelectCategory = React.useCallback((catIndex) => {
         dispatch(setCategory(catIndex))
@@ -23,6 +25,11 @@ const Home = () => {
 
     const onSelectSortType = React.useCallback((sortType) => {
         dispatch(setSortBy(sortType))
+    }, []);
+
+
+    const onAddPizzaToCart = React.useCallback((item) => {
+        dispatch(addPizzaToCart(item))
     }, []);
 
 
@@ -35,10 +42,10 @@ const Home = () => {
     return (
         <div className="container">
             <div className="content__top">
-                <Categories onClickCategory={(catIndex) => onSelectCategory(catIndex)}
+                <Categories onClickCategory={onSelectCategory}
                             activeCategory={category}
                             items={categoryNames}/>
-                <SortPopup onClickSort={(sortType) => {onSelectSortType(sortType)}}
+                <SortPopup onClickSort={onSelectSortType}
                            activeSortType={sortBy.type}
                            items={sortItems}/>
             </div>
@@ -46,7 +53,7 @@ const Home = () => {
             <div className="content__items">
                 {
                     isLoaded
-                        ? items.map((item) => <PizzaBlock key={item.id} {...item}/>)
+                        ? items.map((item) => <PizzaBlock  onAddPizzaToCart={onAddPizzaToCart} addedCount={cartItems[item.id] && cartItems[item.id].length} key={item.id} {...item}/>)
                         : Array(12).fill(0).map((_, index) => <LoadingBlock key={index}/>)
 
                 }
