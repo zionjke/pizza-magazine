@@ -53,7 +53,7 @@ const Home = () => {
             <div className="content__items">
                 {
                     isLoaded
-                        ? items.map((item) => <PizzaBlock  onAddPizzaToCart={onAddPizzaToCart} addedCount={cartItems[item.id] && cartItems[item.id].length} key={item.id} {...item}/>)
+                        ? items.map((item) => <PizzaBlock  onAddPizzaToCart={onAddPizzaToCart} addedCount={cartItems[item.id] && cartItems[item.id].items.length} key={item.id} {...item}/>)
                         : Array(12).fill(0).map((_, index) => <LoadingBlock key={index}/>)
 
                 }
