@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa3eba627943d2ac3dbfb4a2ff5c199e",
+    "revision": "0c2347ef101f9ca2c49fe603ddc2c291",
     "url": "/pizza-magazine/index.html"
   },
   {
-    "revision": "648edca773cb5fd16c4a",
+    "revision": "f146a97a6f0dd5e3b51f",
     "url": "/pizza-magazine/static/css/main.e8385819.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "648edca773cb5fd16c4a",
-    "url": "/pizza-magazine/static/js/main.02d6dc83.chunk.js"
+    "revision": "f146a97a6f0dd5e3b51f",
+    "url": "/pizza-magazine/static/js/main.425c36a7.chunk.js"
   },
   {
     "revision": "0c1d86361c92bd766195",
