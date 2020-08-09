@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pizza-magazine/static/css/main.e8385819.chunk.css",
-    "main.js": "/pizza-magazine/static/js/main.42f87c6f.chunk.js",
-    "main.js.map": "/pizza-magazine/static/js/main.42f87c6f.chunk.js.map",
+    "main.js": "/pizza-magazine/static/js/main.02d6dc83.chunk.js",
+    "main.js.map": "/pizza-magazine/static/js/main.02d6dc83.chunk.js.map",
     "runtime-main.js": "/pizza-magazine/static/js/runtime-main.9349b8b5.js",
     "runtime-main.js.map": "/pizza-magazine/static/js/runtime-main.9349b8b5.js.map",
     "static/js/2.eeb2cb84.chunk.js": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js",
     "static/js/2.eeb2cb84.chunk.js.map": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js.map",
     "index.html": "/pizza-magazine/index.html",
-    "precache-manifest.6efdbf4095ed99c4ba64b4fc7efbacf1.js": "/pizza-magazine/precache-manifest.6efdbf4095ed99c4ba64b4fc7efbacf1.js",
+    "precache-manifest.2168d88655eb25222ea8fb1935ff8f30.js": "/pizza-magazine/precache-manifest.2168d88655eb25222ea8fb1935ff8f30.js",
     "service-worker.js": "/pizza-magazine/service-worker.js",
     "static/css/main.e8385819.chunk.css.map": "/pizza-magazine/static/css/main.e8385819.chunk.css.map",
     "static/js/2.eeb2cb84.chunk.js.LICENSE.txt": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.9349b8b5.js",
     "static/js/2.eeb2cb84.chunk.js",
     "static/css/main.e8385819.chunk.css",
-    "static/js/main.42f87c6f.chunk.js"
+    "static/js/main.02d6dc83.chunk.js"
   ]
 }
