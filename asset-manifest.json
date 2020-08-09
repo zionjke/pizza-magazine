@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pizza-magazine/static/css/main.e8385819.chunk.css",
+    "main.js": "/pizza-magazine/static/js/main.03027616.chunk.js",
+    "main.js.map": "/pizza-magazine/static/js/main.03027616.chunk.js.map",
+    "runtime-main.js": "/pizza-magazine/static/js/runtime-main.9349b8b5.js",
+    "runtime-main.js.map": "/pizza-magazine/static/js/runtime-main.9349b8b5.js.map",
+    "static/js/2.eeb2cb84.chunk.js": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js",
+    "static/js/2.eeb2cb84.chunk.js.map": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js.map",
+    "index.html": "/pizza-magazine/index.html",
+    "precache-manifest.2497b8a3eb7954a1dbf82c3ecabbd7dd.js": "/pizza-magazine/precache-manifest.2497b8a3eb7954a1dbf82c3ecabbd7dd.js",
+    "service-worker.js": "/pizza-magazine/service-worker.js",
+    "static/css/main.e8385819.chunk.css.map": "/pizza-magazine/static/css/main.e8385819.chunk.css.map",
+    "static/js/2.eeb2cb84.chunk.js.LICENSE.txt": "/pizza-magazine/static/js/2.eeb2cb84.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/pizza-magazine/static/media/ProximaNova-Regular.b7c51278.eot",
+    "static/media/empty-cart.png": "/pizza-magazine/static/media/empty-cart.ceb2faf0.png",
+    "static/media/pizza-logo.svg": "/pizza-magazine/static/media/pizza-logo.f3327011.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9349b8b5.js",
+    "static/js/2.eeb2cb84.chunk.js",
+    "static/css/main.e8385819.chunk.css",
+    "static/js/main.03027616.chunk.js"
+  ]
+}
